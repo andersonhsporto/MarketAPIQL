@@ -1,5 +1,6 @@
 type Query {
     clientById(id: ID!): Client
+    clients: [Client!]
 }
 
 type Client {
@@ -13,3 +14,14 @@ type Client {
 type Product {
     name: String!
 }
+
+input ClientInputDTO {
+    name: String!
+    email: String!
+    phone: String
+}
+
+type Mutation {
+    createClient(input: ClientInputDTO!): Client
+}
+

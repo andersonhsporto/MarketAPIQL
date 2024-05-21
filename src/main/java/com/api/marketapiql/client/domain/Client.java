@@ -18,8 +18,6 @@ public class Client {
     private String email;
     private String phone;
 
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
+    @ManyToMany
     private List<Product> products;
-
-
 }

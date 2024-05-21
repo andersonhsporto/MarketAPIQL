@@ -6,6 +6,8 @@ import lombok.Getter;
 import lombok.NoArgsConstructor;
 import lombok.Setter;
 
+import java.util.Collection;
+
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
@@ -19,6 +21,6 @@ public class Product {
 
     private String name;
 
-    @ManyToOne(fetch = FetchType.EAGER)
-    private Client client;
+    @ManyToMany
+    private Collection<Client> client;
 }
