@@ -22,6 +22,6 @@ input ClientInputDTO {
 }
 
 type Mutation {
-    createClient(input: ClientInputDTO!): Client
+    createClient(client: ClientInputDTO!): Client
 }
 
